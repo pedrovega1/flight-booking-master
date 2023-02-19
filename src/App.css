@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@layer base {
+  html,
+  body,
+  #root {
+    @apply h-full;
+  }
+
+  #root {
+    @apply h-fit relative;
+  }
+
+  nav {
+    @apply flex justify-between justify-center p-4;
+  }
+
+  footer {
+    @apply m-0 px-14;
+  }
+}
+
+
+@layer components {
+  .header-logo {
+    @apply flex w-5/12 align-middle;
+  }
+
+  .header-logo img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+body{
+  padding: 2rem;
+}
+.header-logo{
+width:2rem;
+height: 2rem;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.header-logo{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo-title{
+  font-size:2.5rem;
+  font-weight: 500;
+}
+
+.header-account{
+  display: flex;
+}
+.header-account-left{
+  display: flex;
+  margin:0.5rem;
+  padding-right: 0.5em;
+}
+
+.header-account-right{
+  display: flex;
+  margin: 0.5rem;
+}
+
+footer{
+  padding: 0;
+  margin: 0;
+  width:100%;
+  
+}
+.banner {
+  @apply p-32 h-fit;
+}
+
+.main-home {
+  height: px;
+}
