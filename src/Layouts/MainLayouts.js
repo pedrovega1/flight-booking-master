@@ -24,12 +24,6 @@ export default  function MainLayouts(props){
 
     </nav>
     <Outlet></Outlet>
-  
-
-   
-
-
-
 <footer className=" relative bottom-0 inset-x-0 bg-white-50 dark:bg-gray-150">
     
     <div className=" grid grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">

@@ -5,6 +5,7 @@ import { useState } from "react";
 import LocationDropdown from "../components/LocationSelect";
 import { SwitchHorizontalIcon } from "@heroicons/react/outline";
 import ReactDatePicker from "react-datepicker";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -17,9 +18,12 @@ export default function SearchPage(props) {
   const [departure, setDeparture] = useState(null);
   const [arrival, setArrival] = useState(null);
 
+  const navigate = useNavigate()
+
   const handleSearchClick = () => {
     console.log(departure);
     console.log(arrival);
+    navigate(`/search?dep=${departure.value}&arr=${arrival.value}`)
   };
 
   const handleDeparuteChange = (loc) => {
@@ -30,6 +34,10 @@ export default function SearchPage(props) {
     setArrival(loc);
   };
 
+  function addDays(date,numberDays){
+    return
+    date.setDate(date.getDate() + numberDays);
+  }
   return (
     <>
     <div className="rounded-md  bg-white mx-10 p-6 -mt-6 shadow-lg">
@@ -76,7 +84,7 @@ export default function SearchPage(props) {
           </a>
    </div>
        
-        <div className="flex flex-end w-1/s">
+        <div className="flex flex-end w-1/">
         <RoundDripDropdown/>
         <PassengerDropdown/>
         </div>
@@ -115,6 +123,8 @@ export default function SearchPage(props) {
                   className="border border-gray-300 rounded-md py-2 px-4 w-64 mr-1 bg-gray-100"
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
+                  minDate = {new Date()}
+                  maxDate = {addDays(new Date(),90)}
                 />
               </div>
 
@@ -144,6 +154,7 @@ export default function SearchPage(props) {
         </div>
 
   </div>
+
   </>
   );
 }

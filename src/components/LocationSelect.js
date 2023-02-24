@@ -19,7 +19,7 @@ export default function LocationDropdown(props) {
     callback: (options: locationOptions[]) => void
   ) => {
     let response = await fetch(
-      `https://airlabs.co/api/v9/suggest?q=${inputValue}&api_key=987649b0-1084-42f6-919b-575a4b92d176`
+      `https://airlabs.co/api/v9/suggest?q=${inputValue}&api_key=cfe551c5-5a57-4e50-9e49-8cc60db7cc6a`
     );
     let data = await response.json();
     let options = data.response.cities.map((city) => {
