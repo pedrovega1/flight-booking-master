@@ -1,11 +1,12 @@
-import React from "react";
+import React,{useState} from "react";
 import PassengerDropdown from "../components/PassengerDropdown";
 import RoundDripDropdown from "../components/RoundDripDropdown";
-import { useState } from "react";
 import LocationDropdown from "../components/LocationSelect";
 import { SwitchHorizontalIcon } from "@heroicons/react/outline";
 import ReactDatePicker from "react-datepicker";
 import { useNavigate } from "react-router-dom";
+import SearchForm from "./SearchForm";
+
 
 
 
@@ -153,6 +154,9 @@ export default function SearchPage(props) {
           </button>
         </div>
 
+  </div>
+  <div>
+  <SearchForm/>
   </div>
 
   </>

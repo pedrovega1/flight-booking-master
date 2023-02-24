@@ -8,13 +8,17 @@ export default function FlightCard  (props)  {
 <div>
     <img/>
     <div>
-        <h5>{props.flight.dep_iata}</h5>
-        <p>{props.flight.dep_time}</p>
+      <h5>dep_iata</h5>
+      <p>dep_time</p>
+        {/* <h5>{props.flight.dep_iata}</h5> */}
+        {/* <p>{props.flight.dep_time}</p> */}
     </div>
     <img/>
     <div>
-        <h5>{props.flight.arr_iata}</h5>
-        <p>{props.flight.arr_time}</p>
+    <h5>arr_iata</h5>
+      <p>arr_time</p>
+        {/* <h5>{props.flight.arr_iata}</h5>
+        <p>{props.flight.arr_time}</p> */}
     </div>
     <div>
         <h5>$350</h5>

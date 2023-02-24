@@ -13,7 +13,7 @@ function App() {
     <Routes>
       <Route element = {<MainLayouts/>}>
       <Route path='/book' element ={<BookPage/>}/>
-      <Route path='' element ={<HomePage/>}/>
+      <Route path='/' element ={<HomePage/>}/>
       <Route path='/search' element ={<SearchPage/>}/>
       </Route>
     </Routes>
