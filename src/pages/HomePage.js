@@ -2,6 +2,7 @@ import React from 'react'
 import DestinationCard from '../components/DestinationCard'
 import PictureCard from '../components/PictureCard';
 import TrendingCard from '../components/TrendingCard';
+import SearchForm from './SearchForm';
 import SearchPage from './SearchPage';
 
 export default  function HomePage(props){
@@ -139,7 +140,7 @@ export default  function HomePage(props){
             </h4>
          
          </div>
-        <SearchPage/>
+        <SearchForm/>
          <div className='p-14 text-center'>
             <h3 className='text-gray-700 text-4xl font-extrabold'>
                 Search a best place in the world
