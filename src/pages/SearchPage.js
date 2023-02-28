@@ -36,8 +36,8 @@ export default function SearchPage(props) {
   };
 
   function addDays(date,numberDays){
-    return
     date.setDate(date.getDate() + numberDays);
+    return date;
   }
   return (
     <>
@@ -154,9 +154,6 @@ export default function SearchPage(props) {
           </button>
         </div>
 
-  </div>
-  <div>
-  <SearchForm/>
   </div>
 
   </>
