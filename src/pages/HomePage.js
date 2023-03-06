@@ -66,7 +66,7 @@ export default  function HomePage(props){
             name:"London, United Kingdom",
             rating:"3.5",
             activityNumber:196,
-            image:"https://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/Spain/Barcelona/attractions-Park%20G%C3%BCell.jpg?imwidth=680" 
+            image:"https://images.unsplash.com/photo-1488747279002-c8523379faaa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGxvbmRvbnxlbnwwfHwwfHw%3D&w=1000&q=80" 
         },
         {
             name:"Australia Tour",
@@ -158,38 +158,33 @@ export default  function HomePage(props){
         </div>
 
          </div>
-         <div className='text-start px-32'>
+         <div className='text-start px-24 w-full'>
             <h4 className='text-3xl font-bold text-gray-900'>
                 Featured Destination
             </h4>
             <p className='text-md text-gray-500 '>
                 Popular destination for visitors from Indonesia
             </p>
-            <div className='flex  '>
-                <div className='grid grid-flow-row-dense grid-cols-3 grid-rows-4 gap-5'>
-                <div className='col-span-2'>
-                    <PictureCard destination = {featuredDestinations[0]} />
-
-                
+            <div className='  '>
+                <div className='grid grid-cols-3 gap-4'>
+                <div className='col-span-2 '>
+                    <PictureCard 
+                    destination = {featuredDestinations[0]} />
                 </div>
-                <div className='row-span-2'>
+                <div className='h-24 w-2/3'>
                 <PictureCard destination = {featuredDestinations[1]}/>
-                <div>
-
-                <PictureCard destination = {featuredDestinations[4]}/>
                 </div>
-
-                <div>
-                <PictureCard destination = {featuredDestinations[5]}/>
-                </div>
-
-                </div>
-               
-                <div className='row-span-4 '>
+                <div className=' row-span-3 '>
                 <PictureCard destination = {featuredDestinations[2]}/>
                 </div>
-                <div className='row-span-4 '>
+                <div className=' row-span-3 '>
                 <PictureCard destination = {featuredDestinations[3]}/>
+                </div>
+                <div className='  h-24 w-2/3  '>
+                <PictureCard destination = {featuredDestinations[4]}/>
+                </div>
+                <div className='h-24 w-2/3 '>
+                <PictureCard destination = {featuredDestinations[5]}/>
                 </div>
                 </div>
                

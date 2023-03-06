@@ -5,13 +5,13 @@ export default function FlightCard  (props)  {
   const flightTime = date =>{
     let dateTime= Date.parse(date.replace(' ', 'T').concat(':00'))
     dateTime = new Date(dateTime);
-  console.log(typeof(dateTime))
+  // console.log(typeof(dateTime))
     dateTime= dateTime.toLocaleDateString('en-us', {  month:"long", day:"numeric"})
     return dateTime;
   }
   return (
     <>
-<div className=' bg-white w-fit rounded-lg'>
+<div className=' bg-white w-fit rounded-lg m-5 '>
     <div>
 <h3 className='text-gray-700 uppercase my-3 font-bold'>
 
@@ -40,8 +40,8 @@ export default function FlightCard  (props)  {
       <h5 className='text-gray-700 uppercase font-semibold mx-8 '>{props.flight.arr_iata}</h5>
         <p className='text-gray-500 dark:text-gray-400 mx-8 my-2'>{props.flight.arr_time}</p> 
     </div>
-    <div >
-        <h5 className=' text-xl text-gray-800 -mt-2 my-1 '>$350</h5>
+    <div className=' mx-3 px-2.5'>
+        <h5 className=' text-xl text-gray-800 -mt-2  my-1 '>$350</h5>
         <button
       type="button"
       className='inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs uppercase rounded-lg shadow-md hover:to-blue-700 hover:shadow-lg focus:to-blue-300'

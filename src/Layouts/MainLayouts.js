@@ -32,9 +32,9 @@ export default  function MainLayouts(props){
       <img src='https://www.edigitalagency.com.au/wp-content/uploads/tripadvisor-logo-circle-owl-icon-black-green-858x858.png'></img>
       <span className='header-logo-title'> TripAdvisor</span>
     </div>
-    <p className='text-sm text-gray-500 mt-2 pr-8'>
-                This is the team that specializes in 
-                making sure in the find it your interior looks cool
+    <p className='text-lg text-gray-500 px-6 py-7'>
+                This is the team that specializes in <br/>
+                making sure in the find it a <br/> your interior looks cool
     </p>
    </div>
     <div>
