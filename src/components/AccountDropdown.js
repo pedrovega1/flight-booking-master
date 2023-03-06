@@ -9,9 +9,9 @@ function classNames(...classes) {
 
 export default function AccountDropdown() {
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="div" className="relative inline-block text-left -my-1">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white px-2 py-1 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+        <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white px-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
           <Avatar />
           <span className="py-2 font-semibold">Delowar</span>
           <ChevronDownIcon
