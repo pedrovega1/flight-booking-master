@@ -24,13 +24,7 @@ function PriceRange() {
         renderTrack={({ props, children }) => (
           <div
             {...props}
-            style={{
-              ...props.style,
-              height: '5px',
-              width: '75%',
-              backgroundColor: 'blue',
-              borderRadius: "20px"
-            }}
+            className=" h-5px w-3/4 bg-blue-600 rounded-md"
           >
             {children}
           </div>
@@ -39,13 +33,6 @@ function PriceRange() {
           <div
             {...props}
             className="  w-4 h-4 rounded-lg appearance-none cursor-pointer range-lg dark:bg-sky-900"
-            // style={{
-            //   ...props.style,
-            //   height: '16px',
-            //   width: '16px',
-            //   backgroundColor: 'red',
-            //   borderRadius: "80px",
-            // }}
           />
         )}
       />
