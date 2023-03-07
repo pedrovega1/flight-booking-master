@@ -55,7 +55,7 @@ function PriceRange() {
         max="500"
         value={prices[0]}
         onChange={handleInputChange}
-        className = "rounded-lg -my-3 text-center "
+        className = "rounded-lg -my-3 text-center  border-blue-600 border"
         
       />
       

@@ -41,10 +41,10 @@ export default function FlightCard  (props)  {
         <p className='text-gray-500 dark:text-gray-400 mx-8 my-2'>{props.flight.arr_time}</p> 
     </div>
     <div className=' mx-3 px-2.5'>
-        <h5 className=' text-xl text-gray-800 -mt-2  my-1 '>$350</h5>
+        <h5 className=' text-xl text-gray-800 -mt-2  my-1 px-5  '>$350</h5>
         <button
       type="button"
-      className='inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs uppercase rounded-lg shadow-md hover:to-blue-700 hover:shadow-lg focus:to-blue-300'
+      className='inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs uppercase rounded-full shadow-md hover:to-blue-700 hover:shadow-lg focus:to-blue-300'
       >
         Button
     </button>
