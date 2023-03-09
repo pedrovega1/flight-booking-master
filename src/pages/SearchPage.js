@@ -9,6 +9,7 @@ export default function SearchPage(props) {
   const [departureAirports, setDepartureAirports] = useState([]);
   const [arrivalAirports, setArrivalAirports] = useState([]);
   const [maxprice,setMaxPrice] = useState(250)
+  const [bottomCounter, setBottomCounter] = useState(0);
   const changePrice = (price) => {
     setMaxPrice( price)
   }
@@ -150,10 +151,35 @@ export default function SearchPage(props) {
 
   //     getAirports();
   //   },[] );
-
+const handleScroll = (e) =>{
+  const bottom = e.target.scrolHeight - e.target.scrollTop === e.target.clientHeight;
+  if(bottom) {
+    if(
+      flights.filter((f) =>{
+        return f.price >= 50 && f.price <= maxprice;
+      }).length >=
+      5*(bottomCounter + 1)
+    ){
+      setBottomCounter(bottomCounter +1);
+    } else {
+      return;
+    }
+    
+      
+    // Каждый раз достигая дна счетчик bottomCounter увеличивается на 1
+  }
+}
+ const Flightfilter =()=>{
+ 
+   return flights.filter((flight) => flight.price >= 50 && flight.price <= maxprice);
+   
+ }
   return (
     <>
-    <div className="flex  bg-gray-100 w-full searchpage px-24 ">
+    <div 
+      style={{maxHeight:"100vh", overflowY:"scroll"}}
+      onScroll={handleScroll}
+     className="flex  bg-gray-100 w-full searchpage px-24 ">
       <div className=" w-1/5 flex flex-col p-2">
         <div>
           <h1 className="text-gray-700 uppercase font-semibold">
@@ -316,10 +342,19 @@ export default function SearchPage(props) {
       </div>
 
       <div className="flex flex-col w-3/4">
-        {flights
-          .filter((f)=>{
-         return f.price >= 50 && f.price <= maxprice;
-        })
+        {Flightfilter()
+        .slice(
+         0,
+         Flightfilter().length >=
+        5*(bottomCounter + 1)
+        ?5*(bottomCounter + 1)
+        // :flights.filter((f) =>{
+        //   return f.price >= 50 && f.price <=maxprice;
+        // }).length
+        : Flightfilter().length
+         )
+        // индекс от какого элемента вырезать массив, 5*bottomCounter +1, 
+        // Изначально хотим загружать 5 элементов массива, а потом каждый раз достигая дна, загружается еще 5 элементов массива
         .map((flight,index) => {
           return <FlightCard flight={flight} key={index} />;
         })}

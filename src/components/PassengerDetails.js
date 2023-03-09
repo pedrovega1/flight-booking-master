@@ -232,7 +232,7 @@ export default function PassengerDetails() {
     </div>
   </div>
   <div className="px-4">
-  <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xm rounded-full shadow-md hover:to-blue-700 hover:shadow-lg focus:to-blue-300">Continue</button>
+  <button type="button" className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xm rounded-full shadow-md hover:to-blue-700 hover:shadow-lg focus:to-blue-300">Continue</button>
   </div>
 </>
   );
