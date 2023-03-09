@@ -11,7 +11,7 @@ export default function FlightCard  (props)  {
   }
   return (
     <>
-<div className=' bg-white w-fit rounded-lg m-5 '>
+<div className='pl-4 bg-white w-fit rounded-lg m-5 '>
     <div>
 <h3 className='text-gray-700 uppercase my-3 font-bold'>
 
@@ -41,7 +41,9 @@ export default function FlightCard  (props)  {
         <p className='text-gray-500 dark:text-gray-400 mx-8 my-2'>{props.flight.arr_time}</p> 
     </div>
     <div className=' mx-3 px-2.5'>
-        <h5 className=' text-xl text-gray-800 -mt-2  my-1 px-5  '>$350</h5>
+        <h5 className=' text-xl text-gray-800 -mt-2  my-1 px-5  '>
+        {props.flight.price}
+        </h5>
         <button
       type="button"
       className='inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs uppercase rounded-full shadow-md hover:to-blue-700 hover:shadow-lg focus:to-blue-300'

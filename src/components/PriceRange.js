@@ -1,13 +1,15 @@
 import React from 'react'
 import { useState } from 'react'
 import { Range } from 'react-range';
-function PriceRange() {
+function PriceRange(props) {
     const [prices,SetPrices] = useState([250]);
     const handleChange = (prices) => {
+      props.changePrice(prices[0])
       SetPrices(prices);
     };
     const handleInputChange = (event) => {
       const newValue = event.target.value;
+      props.changePrice(newValue);
       SetPrices([parseInt(newValue)]);
     };
   return (

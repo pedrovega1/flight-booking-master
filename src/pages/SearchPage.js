@@ -8,6 +8,12 @@ export default function SearchPage(props) {
   const arrival = params.get("arr");
   const [departureAirports, setDepartureAirports] = useState([]);
   const [arrivalAirports, setArrivalAirports] = useState([]);
+  const [maxprice,setMaxPrice] = useState(250)
+  const changePrice = (price) => {
+    setMaxPrice( price)
+  }
+
+
   const [flights, setFlights] = useState([
     {
       airline_iata: "BA",
@@ -21,6 +27,8 @@ export default function SearchPage(props) {
       arr_time: "2021-07-14 22:52",
 
       duration: 359,
+
+      price:150
     },
     {
       airline_iata: "BA",
@@ -34,6 +42,8 @@ export default function SearchPage(props) {
       arr_time: "2021-07-14 22:52",
 
       duration: 359,
+      
+      price:250
     },
     {
       airline_iata: "BA",
@@ -47,6 +57,8 @@ export default function SearchPage(props) {
       arr_time: "2021-07-14 22:52",
 
       duration: 359,
+      
+      price:100
     },
     {
       airline_iata: "BA",
@@ -60,6 +72,8 @@ export default function SearchPage(props) {
       arr_time: "2021-07-14 22:52",
 
       duration: 359,
+
+      price:300
     },
     {
       airline_iata: "BA",
@@ -73,6 +87,8 @@ export default function SearchPage(props) {
       arr_time: "2021-07-14 22:52",
 
       duration: 359,
+
+      price:50
     },
     {
       airline_iata: "BA",
@@ -86,6 +102,8 @@ export default function SearchPage(props) {
       arr_time: "2021-07-14 22:52",
 
       duration: 359,
+
+      price:250
     },
   ]);
 
@@ -207,7 +225,7 @@ export default function SearchPage(props) {
         </div>
         <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-200"></hr>
         <div className="">
-          <PriceRange />
+          <PriceRange changePrice = {changePrice}   />
         </div>
         <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-200"></hr>
         <h1 className="text-gray-700 dark:text-gray-800 font-semibold">
@@ -298,8 +316,12 @@ export default function SearchPage(props) {
       </div>
 
       <div className="flex flex-col w-3/4">
-        {flights.map((flight) => {
-          return <FlightCard flight={flight} key={flight.flight_number} />;
+        {flights
+          .filter((f)=>{
+         return f.price >= 50 && f.price <= maxprice;
+        })
+        .map((flight,index) => {
+          return <FlightCard flight={flight} key={index} />;
         })}
       </div>
     </div>
