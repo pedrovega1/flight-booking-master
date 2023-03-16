@@ -373,13 +373,7 @@ const handleScroll = (e) =>{
         <input type="search"  className="block w-full p-4 pl-10 text-sm text-gray-500 border border-sky-300 rounded-lg bg-gray-50   " placeholder="Type your email here." required/>
         <button type="submit" className="text-white absolute right-2 bottom-2.5 ml-2 bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 ">Subscribe</button>
     </div>
-</form>
-
-  
-
-
-
-    
+</form>    
     </div>
     </>
   );
