@@ -6,7 +6,7 @@ import SearchPage from './pages/SearchPage';
 import BookPage from './pages/BookPage';
 import MainLayouts from './Layouts/MainLayouts';
 import Avatar from './components/Avatar';
-import "react-datepicker/dist/react-datepicker.css";
+import PayPage from './pages/PayPage';
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
       <Route path='/book' element ={<BookPage/>}/>
       <Route path='/' element ={<HomePage/>}/>
       <Route path='/search' element ={<SearchPage/>}/>
+      <Route path='pay' element = {<PayPage/>}/>
       </Route>
     </Routes>
     

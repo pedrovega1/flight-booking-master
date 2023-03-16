@@ -1,16 +1,18 @@
-import React from "react";
-
+import * as React from "react";
+import { useNavigate } from "react-router-dom";
+import PayPage from "../pages/PayPage";
 export default function PassengerDetails() {
+  const navigate = useNavigate()
   return (
     <>
-    <div className="bg-white rounded-lg border border-gray-400 flex flex-col p-4 w-1/2">
+    <div className="bg-white rounded-lg border border-gray-400 flex flex-col p-4 ">
       <h3 className=" text-lg text-gray-800 font-semibold">
         Passenger Details
       </h3>
       <div className=" flex flex-col ">
         <div className="flex">
           <div className="flex flex-col">
-            <label className="text-gray-400 text-sm w-1/2 mx-2">
+            <label className="text-gray-400 text-sm mx-2">
               First Name
             </label>
             <input
@@ -20,7 +22,7 @@ export default function PassengerDetails() {
             />
           </div>
           <div className="flex flex-col">
-            <label className="text-gray-400 text-sm  w-1/2 mx-2">
+            <label className="text-gray-400 text-sm mx-2">
               Last Name
             </label>
             <input
@@ -82,7 +84,7 @@ export default function PassengerDetails() {
       </div>
     </div>
 
-<div className="bg-white rounded-lg border border-gray-400 flex flex-col p-4 my-5 w-1/2">
+<div className="bg-white rounded-lg border border-gray-400 flex flex-col p-4 my-5">
 <h3 className=" text-lg text-gray-800 font-semibold">
   Passenger Details (Adult)
 </h3>
@@ -124,12 +126,12 @@ export default function PassengerDetails() {
   </div>
 
 
-  <div className="bg-white rounded-lg border border-gray-400 flex flex-col p-4 my-5 w-1/2">
+  <div className="bg-white rounded-lg border border-gray-500 flex flex-col p-4 my-5 ">
     <div className="flex justify-between ">
 <h3 className=" text-lg text-gray-800 font-semibold">
   Contact Details.
 </h3>
-<button className="text-gray-500 border border-gray-400 rounded-full font-semibold w-1/12 text-sm px-1 py-1">Edit</button>
+<button className="text-gray-6  00 border border-gray-400 rounded-full font-semibold w-1/12 text-sm px-1 py-1">Edit</button>
 </div>
 
 
@@ -231,8 +233,9 @@ export default function PassengerDetails() {
       </div>
     </div>
   </div>
-  <div className="px-4">
-  <button type="button" className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xm rounded-full shadow-md hover:to-blue-700 hover:shadow-lg focus:to-blue-300">Continue</button>
+  <div className="">
+    
+  <button  onClick={()=> navigate("/pay")} className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xm rounded-full shadow-md hover:to-blue-700 hover:shadow-lg focus:to-blue-300">Continue</button>
   </div>
 </>
   );

@@ -23,10 +23,11 @@ export default  function MainLayouts(props){
     </div>
 
     </nav>
-    <Outlet></Outlet>
-<footer className=" relative bottom-0 inset-x-0 bg-white-50 dark:bg-gray-150">
+    <Outlet/>
+    {/* Route path,element дочерние элементы, которые будут  между определенными дивами */}
+<footer className=" relative bottom-0  w-full inset-x-0 bg-white-50 dark:bg-gray-150">
     
-    <div className=" grid grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
+    <div className=" grid grid-cols-2 gap-8 px-4 py-5  md:grid-cols-4">
    <div>
    <div className='header-logo'>
       <img src='https://www.edigitalagency.com.au/wp-content/uploads/tripadvisor-logo-circle-owl-icon-black-green-858x858.png'></img>
