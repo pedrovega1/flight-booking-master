@@ -6,7 +6,8 @@ export default function PayPage() {
 
   const [creditCard, SetcreditCard] = useState("mastercard");
   return (
-    <div className="h-screen">
+    <>
+    <div className="h-screen px-5">
       <div>
         <p className="text-lg text-gray-800 font-semibold">Confirm your book</p>
       </div>
@@ -151,12 +152,46 @@ export default function PayPage() {
                 </div>
                 <div>
                   <div className="flex  ">
-                    <input type="text" placeholder="Enter first Name" class="  p-2 border rounded-lg  "></input>
+                    <input type="text" placeholder="Enter first Name" className="  p-2 border rounded-lg  "></input>
                   </div>
+                  <div className="flex ">
+                  <div className="flex flex-col">
+                  <label className="text-gray-500 text-lg w-1/2 mx-2">Expiry Date</label>
+                  <input type="text" placeholder="MM/YY" className="p-2 border text-gray-800 "></input>
+                  </div>
+
+                  <div className="flex flex-col">
+                  <label className="text-gray-500 text-lg w-1/2 mx-2">CVC/CVV</label>
+                  <input type="text" placeholder="****" className="p-2 border "></input>
+                  </div>
+                  </div>
+
+                  <div className="flex items-center py-2 px-4 ">
+                  <input type="checkbox" className="py-2"></input>
+                  <label className="text-gray-700 text-md px-2 "> Save Card</label>
                   
+                  </div>
+                  <button class="text-white text-lg bg-blue-600 rounded-full py-4 px-8 w-fit h-fit mt-auto hover:bg-blue-700 active:bg-blue-800">Confirm and receive</button>
                 </div>
               </div>
       
     </div>
+
+<div className="rounded-md  bg-sky-500  p-6 mx-20 -mt-10 shadow-lg flex justify-between ">
+<div className="px-32">
+  <h1 className="text-white font-bold text-4xl">Get out pro offers</h1>
+  <p className="text-gray-300 dark:text-gray-200 font-semibold text-lg py-3">Create a visual identity for your company, and an <br/> overall brand</p>
+</div>
+
+<form>   
+
+<div className="relative m-8  ">
+ 
+  <input type="search"  className="block w-full p-4 pl-10 text-sm text-gray-500 border border-sky-300 rounded-lg bg-gray-50   " placeholder="Type your email here." required/>
+  <button type="submit" className="text-white absolute right-2 bottom-2.5 ml-2 bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 ">Subscribe</button>
+</div>
+</form>    
+</div>
+    </>
   );
 }
