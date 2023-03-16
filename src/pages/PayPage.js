@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
 export default function PayPage() {
   const navigate = useNavigate();
 
@@ -146,7 +145,17 @@ export default function PayPage() {
     </div>
 </div>
       {/* card number */}
-
+              <div>
+                <div>
+                  <h3 className=" text-lg text-gray-800 font-semibold">Card Number</h3>
+                </div>
+                <div>
+                  <div className="flex  ">
+                    <input type="text" placeholder="Enter first Name" class="  p-2 border rounded-lg  "></input>
+                  </div>
+                  
+                </div>
+              </div>
       
     </div>
   );
