@@ -12,7 +12,7 @@ export default function PassengerDetails() {
       <div className=" flex flex-col ">
         <div className="flex">
           <div className="flex flex-col">
-            <label className="text-gray-400 text-sm mx-2">
+            <label className="text-gray-500 text-sm mx-2">
               First Name
             </label>
             <input
@@ -22,7 +22,7 @@ export default function PassengerDetails() {
             />
           </div>
           <div className="flex flex-col">
-            <label className="text-gray-400 text-sm mx-2">
+            <label className="text-gray-500 text-sm mx-2">
               Last Name
             </label>
             <input
@@ -34,7 +34,7 @@ export default function PassengerDetails() {
         </div>
         <div className="flex">
           <div className="flex flex-col mx-2">
-            <label className="text-gray-400 text-sm ">Gender</label>
+            <label className="text-gray-500 text-sm ">Gender</label>
             <select className="p-2 border border-gray-200 rounded-md">
               <option>Male</option>
               <option>Female</option>
@@ -42,7 +42,7 @@ export default function PassengerDetails() {
             </select>
           </div>
           <div className=" flex flex-col mx-2">
-            <label className="text-gray-400 text-sm">Birthday</label>
+            <label className="text-gray-500 text-sm">Birthday</label>
             <div className="flex">
             <select className="p-2 border border-gray-200 rounded-md">
               <option selected disabled>
@@ -91,7 +91,7 @@ export default function PassengerDetails() {
 <div className=" flex flex-col ">
   <div className="flex">
     <div className="flex flex-col">
-      <label className="text-gray-400 text-sm w-1/2 mx-2">
+      <label className="text-gray-500 text-sm w-1/2 mx-2">
         First Name
       </label>
       <input
@@ -101,7 +101,7 @@ export default function PassengerDetails() {
       />
     </div>
     <div className="flex flex-col">
-      <label className="text-gray-400 text-sm  w-1/2 mx-2">
+      <label className="text-gray-500 text-sm  w-1/2 mx-2">
         Last Name
       </label>
       <input
@@ -113,7 +113,7 @@ export default function PassengerDetails() {
   </div>
   <div className="flex">
     <div className="flex flex-col mx-2">
-      <label className="text-gray-400 text-sm ">Gender</label>
+      <label className="text-gray-500 text-sm ">Gender</label>
       <select className="p-2 border border-gray-200 rounded-md">
         <option>Male</option>
         <option>Female</option>
@@ -138,7 +138,7 @@ export default function PassengerDetails() {
 <div className=" flex flex-col ">
   <div className="flex">
     <div className="flex flex-col">
-      <label className="text-gray-400 text-sm w-1/2 mx-2">
+      <label className="text-gray-500 text-sm w-1/2 mx-2">
         First Name
       </label>
       <input
@@ -148,7 +148,7 @@ export default function PassengerDetails() {
       />
     </div>
     <div className="flex flex-col">
-      <label className="text-gray-400 text-sm  w-1/2 mx-2">
+      <label className="text-gray-500 text-sm  w-1/2 mx-2">
         Last Name
       </label>
       <input
@@ -161,7 +161,7 @@ export default function PassengerDetails() {
   </div>
   <div className="flex">
   <div className="flex flex-col">
-      <label className="text-gray-400 text-sm   mx-2">
+      <label className="text-gray-500 text-sm   mx-2">
         Enter an adress name
       </label>
       <input
@@ -171,7 +171,7 @@ export default function PassengerDetails() {
       />
     </div>
     <div className="flex flex-col">
-      <label className="text-gray-400 text-sm  w-1/2 mx-2">
+      <label className="text-gray-500 text-sm  w-1/2 mx-2">
         City
       </label>
       <input
@@ -185,8 +185,8 @@ export default function PassengerDetails() {
   <div className="flex">
     <div className="flex  ">
       <div className="flex flex-col ">
-      <label className="text-gray-400 text-sm ">Country</label>
-      <select className="p-2 border border-gray-200 text-gray-400 text-sm rounded-md">
+      <label className="text-gray-500 text-sm ">Country</label>
+      <select className="p-2 border border-gray-200 text-gray-500 text-sm rounded-md">
         <option>KZ</option>
         <option>USA</option>
         <option>Ireland</option>
@@ -194,7 +194,7 @@ export default function PassengerDetails() {
       </div>
 
       <div className="flex flex-col ">
-      <label className="text-gray-400 text-sm  w-1/2 mx-2">
+      <label className="text-gray-500 text-sm  w-1/2 mx-2">
         City
       </label>
       <input
@@ -210,8 +210,8 @@ export default function PassengerDetails() {
       <div className="flex ">
     <div className="flex  ">
       <div className="flex flex-col ">
-      <label className="text-gray-400 text-sm ">Country code</label>
-      <select className="p-2 border border-gray-200 text-gray-400 text-sm rounded-md">
+      <label className="text-gray-500 text-sm ">Country code</label>
+      <select className="p-2 border border-gray-200 text-gray-500 text-sm rounded-md">
         <option>+997</option>
         <option>+1</option>
         <option>+353</option>
@@ -219,10 +219,10 @@ export default function PassengerDetails() {
       </div>
 
       <div className="flex flex-col">
-      <label className="text-gray-400 text-sm   mx-2">
+      <label className="text-gray-500 text-sm   mx-2">
         Enter a phone number
       </label>
-      <select className=" p-2 border border-gray-200 text-gray-400 text-md rounded-md">
+      <select className=" p-2 border border-gray-200 text-gray-500 text-md rounded-md">
         <option selected disabled>Phone number</option>
         <option></option>
         <option></option>

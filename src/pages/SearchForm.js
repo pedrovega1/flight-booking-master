@@ -146,7 +146,8 @@ export default function SearchForm(props) {
       </div>
       <div className="flex">
           <button
-            onClick={handleSearchClick}
+            // onClick={handleSearchClick}
+            onClick={() => navigate("/search")}
             className="text-white bg-blue-600 rounded-md py-4 px-8 w-fit h-fit mt-auto hover:bg-blue-700 active:bg-blue-800"
           >
             Search

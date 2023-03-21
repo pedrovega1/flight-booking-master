@@ -1,15 +1,13 @@
 import React from "react";
-import { useState } from "react";
-import PayDetails from "../components/PayDetails";
-export default function PayPage() {
+import CongratComp from "../components/CongratComp";
 
+export default function Congratulations() {
   return (
     <>
- 
-      <PayDetails />
-  
-    <div className="mt-10 "></div>
-    <div className="rounded-md  bg-sky-500   p-6 mx-20 -mt-30 shadow-lg flex justify-between  ">
+   <div className="flex px-48">
+ <CongratComp/>
+   </div>
+   <div className="rounded-md  bg-sky-500   p-6 mx-20 -mt-30 shadow-lg flex justify-between  ">
       <div className="px-32">
         <h1 className="text-white font-bold text-4xl">Get out pro offers</h1>
         <p className="text-gray-300 dark:text-gray-200 font-semibold text-lg py-3">
@@ -36,7 +34,5 @@ export default function PayPage() {
       </form>
     </div>
     </>
-
-
   );
 }
