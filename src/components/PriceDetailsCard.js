@@ -30,25 +30,35 @@ export default function PriceDetailsCard() {
           </p>
         </div>
       </div>
-      
+
       <div className=" flex flex-col border border-b border-gray-200 py-3">
         <h1 className="text-gray-800 text-lg font-semibold">Passenger</h1>
-        <p className="text-md text-gray-400 font-semibold bg-gray-300 ">1x adult 2 children</p>
+        <p className="text-md text-gray-400 font-semibold bg-gray-300 ">
+          1x adult 2 children
+        </p>
       </div>
       <div className="flex flex-col border border-b border-gray-200">
-        <h1 className="text-gray-800 text-lg font-semibold ">Check-in baggage</h1>
+        <h1 className="text-gray-800 text-lg font-semibold ">
+          Check-in baggage
+        </h1>
         <p className="flex justify-between">
           <span className=" text-gray-400 text-md font-semibold">Depature</span>
-          <span className=" text-gray-400 text-md font-semibold">3 bags (120g total)</span>
+          <span className=" text-gray-400 text-md font-semibold">
+            3 bags (120g total)
+          </span>
         </p>
         <p className="flex justify-between ">
           <span className=" text-gray-400 text-md font-semibold">Return</span>
-          <span className=" text-gray-400 text-md font-semibold">3 bags (120g total)</span>
+          <span className=" text-gray-400 text-md font-semibold">
+            3 bags (120g total)
+          </span>
         </p>
       </div>
       <div className=" flex flex-col border border-b border-gray-200 py-3">
         <h1 className="text-gray-800 text-lg font-semibold">Services</h1>
-        <p className="text-md text-gray-400 font-semibold  ">No extra services selected</p>
+        <p className="text-md text-gray-400 font-semibold  ">
+          No extra services selected
+        </p>
       </div>
     </div>
   );

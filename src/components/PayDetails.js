@@ -76,6 +76,8 @@ export default function PayDetails() {
                 backgroundImage: `url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Visa_2021.svg/1200px-Visa_2021.svg.png")`,
                 height: "120px",
                 width: "200px",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
               className={
                 creditCard === "VISA"
@@ -91,14 +93,6 @@ export default function PayDetails() {
               {creditCard === "VISA" && (
                 <CheckIcon className=" absolute right-0 top-0 h-5 w-5" />
               )}
-              {/* <input
-                type="radio"
-                name="creditcard"
-                className="absolute right-0 top-0"
-                onClick={() => {
-                  SetcreditCard("VISA");
-                }}
-              /> */}
             </div>
           </div>
         </div>
@@ -201,7 +195,10 @@ export default function PayDetails() {
                   Save Card
                 </label>
               </div>
-              <button onClick={()=> navigate("/end")} className="text-white text-lg bg-blue-600 rounded-full py-4 px-8 w-fit h-fit mt-auto hover:bg-blue-700 active:bg-blue-800">
+              <button
+                onClick={() => navigate("/end")}
+                className="text-white text-lg bg-blue-600 rounded-full py-4 px-8 w-fit h-fit mt-auto hover:bg-blue-700 active:bg-blue-800"
+              >
                 Confirm and receive
               </button>
             </div>
@@ -262,7 +259,9 @@ export default function PayDetails() {
                 <span className=" text-gray-400 text-md font-semibold">
                   1x Passenger
                 </span>
-                <span className=" text-gray-800 text-md font-semibold">$140</span>
+                <span className=" text-gray-800 text-md font-semibold">
+                  $140
+                </span>
               </p>
               <p className="flex justify-between">
                 <span className=" text-gray-400 text-md font-semibold">
@@ -278,8 +277,12 @@ export default function PayDetails() {
               </p>
 
               <p className="flex justify-between">
-                <span className=" text-gray-800 text-md font-semibold">Total</span>
-                <span className=" text-gray-800 text-md font-semibold">$150</span>
+                <span className=" text-gray-800 text-md font-semibold">
+                  Total
+                </span>
+                <span className=" text-gray-800 text-md font-semibold">
+                  $150
+                </span>
               </p>
               <p className="">
                 <span className="text-gray-400 text-md ">

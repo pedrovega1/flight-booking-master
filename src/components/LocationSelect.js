@@ -6,7 +6,7 @@ export default function LocationDropdown(props) {
   const location = props.location;
   const [loc, setLocation] = useState(null);
   let locationOptions = [];
-  const filterLocations = (inputValue:String) => {
+  const filterLocations = (inputValue: String) => {
     return locationOptions.filter((i) =>
       i.label.toLowerCase().includes(inputValue.toLowerCase())
     );

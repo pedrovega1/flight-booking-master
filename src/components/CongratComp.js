@@ -77,7 +77,10 @@ export default function CongratComp() {
         </button>
       </div>
       <div className="w-1/2">
-      <img src="https://d12oja0ew7x0i8.cloudfront.net/images/Article_Images/ImageForArticle_12117(1).jpg" class="rounded-lg mt-4"/>
+        <img
+          src="https://d12oja0ew7x0i8.cloudfront.net/images/Article_Images/ImageForArticle_12117(1).jpg"
+          class="rounded-lg mt-4"
+        />
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import PassengerDropdown from "../components/PassengerDropdown";
 import RoundDripDropdown from "../components/RoundDripDropdown";
 import LocationDropdown from "../components/LocationSelect";
@@ -6,11 +6,7 @@ import { SwitchHorizontalIcon } from "@heroicons/react/outline";
 import ReactDatePicker from "react-datepicker";
 import { useNavigate } from "react-router-dom";
 
-
-
-
 export default function SearchForm(props) {
-
   const [searchMode, setSearchMode] = useState("hotel");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
@@ -18,12 +14,12 @@ export default function SearchForm(props) {
   const [departure, setDeparture] = useState(null);
   const [arrival, setArrival] = useState(null);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSearchClick = () => {
     console.log(departure);
     console.log(arrival);
-    navigate(`/search?dep=${departure.value}&arr=${arrival.value}`)
+    navigate(`/search?dep=${departure.value}&arr=${arrival.value}`);
   };
 
   const handleDeparuteChange = (loc) => {
@@ -34,63 +30,66 @@ export default function SearchForm(props) {
     setArrival(loc);
   };
 
-  function addDays(date,numberDays){
+  function addDays(date, numberDays) {
     date.setDate(date.getDate() + numberDays);
     return date;
   }
   return (
     <>
-    <div className="rounded-md  bg-white mx-10 p-6 -mt-6 shadow-lg">
-      <div className="flex flex-col">
-        <div className=" border-b-2 border-gray-100 flex justify-between">
-          <div className="flex w-1/2 flex-start text-gray-500 space-x-3  ">
-          <a
-            className={searchMode === "hotel" ? "  border-b-4 border-indigo-500 text-gray-700 font-bold " : ""}
-            onClick={() => {
-             setSearchMode('hotel')
-              console.log("hotel");
-            
-            }}
-            
-          >
-            <i className="fa-sharp fa-solid fa-bed">
-            
-            </i>
-            Hotel
-           
-          </a>
-          <a
-            className={
-                searchMode === "flight" ? " border-b-4 border-indigo-500 text-gray-700 font-bold" : ""
-            }
-            
-            onClick={() => {
-          setSearchMode('flight')
-              console.log("flight");
-            }}
-          >
-            <i className="fa-solid fa-plane"></i>
-            Flight
-          </a>
-          <a
-            className={searchMode === "car" ? " border-b-4 border-indigo-500 text-gray-700 font-bold" : ""}
-            onClick={() => {
-             setSearchMode('car')
-              console.log("car");
-            }}
-          >
-            <i className="fa-sharp fa-solid fa-car-side"></i>
-            Car Rental
-          </a>
-   </div>
-       
-        <div className="flex flex-end w-1/">
-        <RoundDripDropdown/>
-        <PassengerDropdown/>
-        </div>
+      <div className="rounded-md  bg-white mx-10 p-6 -mt-6 shadow-lg">
+        <div className="flex flex-col">
+          <div className=" border-b-2 border-gray-100 flex justify-between">
+            <div className="flex w-1/2 flex-start text-gray-500 space-x-3  ">
+              <a
+                className={
+                  searchMode === "hotel"
+                    ? "  border-b-4 border-indigo-500 text-gray-700 font-bold "
+                    : ""
+                }
+                onClick={() => {
+                  setSearchMode("hotel");
+                  console.log("hotel");
+                }}
+              >
+                <i className="fa-sharp fa-solid fa-bed"></i>
+                Hotel
+              </a>
+              <a
+                className={
+                  searchMode === "flight"
+                    ? " border-b-4 border-indigo-500 text-gray-700 font-bold"
+                    : ""
+                }
+                onClick={() => {
+                  setSearchMode("flight");
+                  console.log("flight");
+                }}
+              >
+                <i className="fa-solid fa-plane"></i>
+                Flight
+              </a>
+              <a
+                className={
+                  searchMode === "car"
+                    ? " border-b-4 border-indigo-500 text-gray-700 font-bold"
+                    : ""
+                }
+                onClick={() => {
+                  setSearchMode("car");
+                  console.log("car");
+                }}
+              >
+                <i className="fa-sharp fa-solid fa-car-side"></i>
+                Car Rental
+              </a>
+            </div>
 
-      </div>
-      <div className="flex">
+            <div className="flex flex-end w-1/">
+              <RoundDripDropdown />
+              <PassengerDropdown />
+            </div>
+          </div>
+          <div className="flex">
             <div className="grid grid-cols-2 gap-2 relative w-fit h-full mr-1">
               <div className="flex flex-col">
                 <label className="text-sm text-gray-600 font-semibold">
@@ -123,8 +122,8 @@ export default function SearchForm(props) {
                   className="border border-gray-300 rounded-md py-2 px-4 w-64 mr-1 bg-gray-100"
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
-                  minDate = {new Date()}
-                  maxDate = {addDays(new Date(),90)}
+                  minDate={new Date()}
+                  maxDate={addDays(new Date(), 90)}
                 />
               </div>
 
@@ -143,8 +142,8 @@ export default function SearchForm(props) {
               </div>
             </div>
           </div>
-      </div>
-      <div className="flex">
+        </div>
+        <div className="flex">
           <button
             // onClick={handleSearchClick}
             onClick={() => navigate("/search")}
@@ -153,9 +152,7 @@ export default function SearchForm(props) {
             Search
           </button>
         </div>
-
-  </div>
-
-  </>
+      </div>
+    </>
   );
 }
