@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import FlightCard from "../components/FlightCard";
 import PriceRange from "../components/PriceRange";
-
+import { useNavigate } from "react-router-dom";
 export default function SearchPage(props) {
   const params = new URL(document.location).searchParams;
   const departure = params.get("dep");
@@ -13,6 +13,8 @@ export default function SearchPage(props) {
   const changePrice = (price) => {
     setMaxPrice(price);
   };
+
+  const navigate = useNavigate();
 
   const [flights, setFlights] = useState([
     {
@@ -358,6 +360,14 @@ export default function SearchPage(props) {
               return <FlightCard flight={flight} key={index} />;
             })}
         </div>
+      </div>
+      <div className="flex justify-center items-center  p-2">
+        <button
+          onClick={() => navigate("/book")}
+          className="text-white bg-blue-600 rounded-md py-4 px-8 w-fit h-fit hover:bg-blue-700 active:bg-blue-800"
+        >
+          Continue
+        </button>
       </div>
       <div class="newsletter-section bg-gray-900 py-10">
   <div class="container mx-auto px-4">
